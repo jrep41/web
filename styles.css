@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #B0C4DE;
+    padding: 10px;
+}
+
+header h1 {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.header-left, .header-right {
+    flex-basis: 10%;
+}
+
+header input {
+    width: 100%;
+    padding: 5px;
+}
+
+nav {
+    background-color: #4682B4;
+    padding: 10px;
+    color: white;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 5px 0;
+}
+
+main {
+    display: flex;
+    padding: 10px;
+}
+
+.foto, .featured-news, .side-panel, .jobs-banner {
+    padding: 5px;
+    border: 1px solid #4682B4;
+    background-color: #ADD8E6;
+    margin: 5px;
+}
+
+.foto {
+    flex-basis: 20%;
+}
+
+.featured-news {
+    flex-basis: 50%;
+}
+
+.side-panel {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-panel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-panel li {
+    margin: 5px 0;
+}
+
+.main-ad {
+    background-color: #B0C4DE;
+    margin: 5px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.ads {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ad {
+    background-color: #B0C4DE;
+    padding: 10px;
+    flex-basis: 45%;
+    text-align: center;
+}
+
+.jobs-banner {
+    flex-basis: 100%;
+    margin: 5px;
+    padding: 10px;
+    background-color: #B0C4DE;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #B0C4DE;
+}
+
+footer p {
+    margin: 0;
+}
+
+.bottom-banner {
+    text-align: center;
+    padding: 10px;
+    background-color: #4682B4;
+    color: white;
+}
