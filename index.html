@@ -1,77 +1,102 @@
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Homepage</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="container">
-            <header>
-                <div class="header-left">
-                    <a href="#">Header</a>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header">
+                <a href="#" class="logo">Header</a>
+                <div class="search">
+                    <form id="searchForm" action="https://www.bing.com/search" method="get" target="_blank">
+                        <input type="text" name="q" placeholder="Buscar...">
+                        <button type="submit">Buscar</button>
+                    </form>
                 </div>
-                <div class="header-right">
-                    <input type="text" placeholder="Search">
-                </div>
-                <h1>Homepage</h1>
-            </header>
-            <nav>
-                <div class="menu">
-                    <ul>
-                        <li><strong>States</strong></li>
-                        <li><a href="#">Virginia</a></li>
-                        <li><a href="#">Maryland</a></li>
-                    </ul>
-                    <ul>
-                        <li><strong>Sections</strong></li>
-                        <li><a href="#">Health</a></li>
-                        <li><a href="#">Sport</a></li>
-                        <li><a href="#">Finance</a></li>
-                        <li><a href="#">...</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <main>
+            </div>
+            <h1>Homepage</h1>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Sidebar Menu -->
+            <div class="menu">
+                <h3>Estados</h3>
+                <ul>
+                    <li><a href="#">Virginia</a></li>
+                    <li><a href="#">Maryland</a></li>
+                </ul>
+                <h3>Secciones</h3>
+                <ul>
+                    <li><a href="#">Salud</a></li>
+                    <li><a href="#">Deportes</a></li>
+                    <li><a href="#">Finanzas</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Section -->
+            <div class="content">
                 <div class="foto">
-                    <img src="https://via.placeholder.com/150x100" alt="">
-                    <p>foto</p>
+                    <p>Foto</p>
                 </div>
                 <div class="featured-news">
-                    <p><strong>Featured News</strong></p>
+                    <h2>Noticias Destacadas</h2>
                 </div>
-                <div class="side-panel">
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Daily Word</a></li>
-                        <li><a href="#">Archive</a></li>
-                    </ul>
-                    <div class="main-ad">Main Ad</div>
-                    <div class="ads">
-                        <div class="ad">Ad</div>
-                        <div class="ad">Ad</div>
+                <div class="right-content">
+                    <div class="login-section">
+                        <ul>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Palabra Diaria</a></li>
+                            <li><a href="#">Archivo</a></li>
+                        </ul>
+                    </div>
+                    <div class="main-ad">
+                        <p>Main Ad</p>
+                    </div>
+                    <div class="ad-section">
+                        <div class="ad">Ad 1</div>
+                        <div class="ad">Ad 2</div>
                     </div>
                 </div>
-                <div class="jobs-banner">
-                    <p>Jobs Banner</p>
-                </div>
-            </main>
-            <footer>
-                <div class="footer-left">
-                    <p><a href="#">Latest News</a></p>
-                </div>
-                <div class="footer-center">
-                    <p><a href="#">Latest Announcements</a></p>
-                </div>
-                <div class="footer-right">
-                    <p>Editorial</p>
-                </div>
-            </footer>
-            <div class="bottom-banner">
-                <p>Banner</p>
+            </div>
+
+            <!-- Banner Section -->
+            <div class="jobs-banner">
+                <p>Jobs Banner</p>
             </div>
         </div>
-        <script src="script.js"></script>
-    </body>
-    </html>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-links">
+                <div><a href="#">Últimas Noticias</a></div>
+                <div><a href="#">Últimos Anuncios</a></div>
+                <div><a href="#">Editorial</a></div>
+            </div>
+            <div class="footer-banner">
+                <p>Banner</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            var queryInput = document.querySelector('input[name="q"]');
+            if (!queryInput.value) {
+                event.preventDefault();
+                alert('Por favor, ingrese una consulta de búsqueda.');
+            } else {
+                setTimeout(function() {
+                    queryInput.value = '';
+                }, 10);
+            }
+        });
+    </script>
+</body>
+</html>
