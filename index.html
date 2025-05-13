@@ -1,102 +1,95 @@
+<!-- @format -->
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Inicio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <!-- Header -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Boceto Sitio</title>
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+    <body>
         <header>
-            <div class="header">
-                <a href="#" class="logo">Header</a>
-                <div class="search">
-                    <form id="searchForm" action="https://www.bing.com/search" method="get" target="_blank">
-                        <input type="text" name="q" placeholder="Buscar...">
-                        <button type="submit">Buscar</button>
-                    </form>
-                </div>
+            <div class="header-content">
+                <div class="logo">Header</div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Status</a></li>
+                        <li><a href="#">Featured</a></li>
+                        <li><a href="#">Daily Word</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </nav>
             </div>
-            <h1>Homepage</h1>
         </header>
 
-        <!-- Main Content -->
-        <div class="main-content">
-            <!-- Sidebar Menu -->
-            <div class="menu">
-                <h3>Estados</h3>
-                <ul>
-                    <li><a href="#">Virginia</a></li>
-                    <li><a href="#">Maryland</a></li>
-                </ul>
-                <h3>Secciones</h3>
-                <ul>
-                    <li><a href="#">Salud</a></li>
-                    <li><a href="#">Deportes</a></li>
-                    <li><a href="#">Finanzas</a></li>
-                </ul>
-            </div>
-
-            <!-- Main Section -->
-            <div class="content">
-                <div class="foto">
-                    <p>Foto</p>
+        <main>
+            <section class="viralna">
+                <h2>Viralna</h2>
+                <div class="content">
+                    <article>
+                        <h3>News</h3>
+                        <p>Latest news updates.</p>
+                    </article>
+                    <article>
+                        <h3>Archive</h3>
+                        <p>Browse past articles.</p>
+                    </article>
+                    <article>
+                        <h3>Maryland</h3>
+                        <p>Local news and events.</p>
+                    </article>
+                    <article>
+                        <h3>Foto</h3>
+                        <p>Photo gallery.</p>
+                    </article>
                 </div>
-                <div class="featured-news">
-                    <h2>Noticias Destacadas</h2>
+            </section>
+
+            <section class="sections">
+                <h2>Sections</h2>
+                <div class="content">
+                    <article>
+                        <h3>Health</h3>
+                        <p>Health-related news.</p>
+                    </article>
+                    <article>
+                        <h3>Sport</h3>
+                        <p>Sports updates.</p>
+                    </article>
+                    <article>
+                        <h3>Finance</h3>
+                        <p>Financial news.</p>
+                    </article>
                 </div>
-                <div class="right-content">
-                    <div class="login-section">
-                        <ul>
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#">Palabra Diaria</a></li>
-                            <li><a href="#">Archivo</a></li>
-                        </ul>
+            </section>
+
+            <section class="ads">
+                <div class="main-ad">Main Ad</div>
+                <div class="jobs-banner">Jobs Banner</div>
+                <div class="ad">Ad</div>
+                <div class="ad">Ad</div>
+            </section>
+
+            <footer>
+                <div class="footer-content">
+                    <div class="latest-news">
+                        <h3>Latest News</h3>
+                        <p>Stay updated with the latest news.</p>
                     </div>
-                    <div class="main-ad">
-                        <p>Main Ad</p>
+                    <div class="editorial">
+                        <h3>Editorial</h3>
+                        <p>Opinions and editorials.</p>
                     </div>
-                    <div class="ad-section">
-                        <div class="ad">Ad 1</div>
-                        <div class="ad">Ad 2</div>
+                    <div class="announcements">
+                        <h3>Announcements</h3>
+                        <p>Important announcements.</p>
                     </div>
+                    <div class="banner">Banner</div>
                 </div>
-            </div>
-
-            <!-- Banner Section -->
-            <div class="jobs-banner">
-                <p>Jobs Banner</p>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            <div class="footer-links">
-                <div><a href="#">Últimas Noticias</a></div>
-                <div><a href="#">Últimos Anuncios</a></div>
-                <div><a href="#">Editorial</a></div>
-            </div>
-            <div class="footer-banner">
-                <p>Banner</p>
-            </div>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
-    <script>
-        document.getElementById('searchForm').addEventListener('submit', function(event) {
-            var queryInput = document.querySelector('input[name="q"]');
-            if (!queryInput.value) {
-                event.preventDefault();
-                alert('Por favor, ingrese una consulta de búsqueda.');
-            } else {
-                setTimeout(function() {
-                    queryInput.value = '';
-                }, 10);
-            }
-        });
-    </script>
-</body>
+            </footer>
+        </main>
+    </body>
 </html>
